@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Art/Space/UIHealthFrame.png?fileID=2800000&amp;guid=c3776a85830b4f44ba9ef2b658b1cb8c&amp;type=3#UIHealthFrame&quot;); width: 428px; height: 243px; -unity-background-scale-mode: scale-to-fit;">
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; height: 73px; width: 242px; top: 81px; left: 176px;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Space/UIHealthBar.png?fileID=2800000&amp;guid=98766a841ed2bbf4ca5ef61a4502c560&amp;type=3#UIHealthBar&quot;); width: 100%; height: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Space/jato.png?fileID=2800000&amp;guid=d60148136e069b94fb8a9ec5267c0570&amp;type=3#jato&quot;); -unity-background-scale-mode: scale-to-fit; position: absolute; height: 137px; width: 129px; top: 59px; left: 37px;" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Press SPACE key" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font: url(&quot;project://database/Assets/Settings/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=e93c7aaa96d431c4fafddfd8a7d489fe&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 37px;" />
+    </ui:VisualElement>
+</ui:UXML>
