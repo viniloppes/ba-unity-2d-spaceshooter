@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     //Projectile
     public GameObject projectilePrefab;
 
-    public InputAction talkAction;
 
 
     AudioSource audioSource;
@@ -44,7 +43,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         MoveAction.Enable();
-        talkAction.Enable();
         animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
 
@@ -74,9 +72,6 @@ public class PlayerController : MonoBehaviour
             moveDirection.Set(move.x, move.y);
             moveDirection.Normalize();
         }
-        //animator.SetFloat("Look X", moveDirection.x);
-        //animator.SetFloat("Look Y", moveDirection.y);
-      //  animator.SetFloat("Speed", move.magnitude);
 
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -84,11 +79,7 @@ public class PlayerController : MonoBehaviour
             Launch();
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Debug.Log("Try Talk with NPC");
-            FindFriend();
-        }
+      
 
     }
     private void FixedUpdate()
@@ -129,17 +120,5 @@ public class PlayerController : MonoBehaviour
        // animator.SetTrigger("Launch");
     }
 
-    void FindFriend()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, moveDirection, 5f, LayerMask.GetMask("NPC"));
-        if (hit.collider != null)
-        {
-
-            UIHandler.instance.DisplayDialogue();
-        } else
-        {
-
-        }
-
-    }
+ 
 }
